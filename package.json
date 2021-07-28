@@ -11,8 +11,8 @@
     "fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
   },
   "dependencies": {
-    "@nuxtjs/gtm": "^2.4.0",
     "@netsells/nuxt-hotjar": "^0.1.3",
+    "@nuxtjs/gtm": "^2.4.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.20.0",

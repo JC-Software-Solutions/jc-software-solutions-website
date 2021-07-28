@@ -7,8 +7,10 @@
   >
     <div class="py-1">
       {{ (new Date()).getFullYear() }} &copy; Jeroen Claessens -
-      {{ $t('footer.viewOn') }}
-      <font-awesome-icon :icon="['fab', 'github']" />
+      <a href="https://github.com/jclaessens97" target="_blank" rel="noreferrer noopener" aria-label="Github"> 
+        {{ $t('footer.viewOn') }}
+        <font-awesome-icon :icon="['fab', 'github']" />
+      </a>
     </div>
     <div v-if="width < 768">
       <Socials orientation="horizontal" />

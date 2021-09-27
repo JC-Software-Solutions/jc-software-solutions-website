@@ -1,71 +1,55 @@
 <template>
-  <ul class="timeline text-white">
-    <li
-      v-for="item in input"
-      :key="item.id"
-      class="grid grid-flow-row auto-rows-min auto-cols-auto tl-item"
-    >
-      <div class="flex -mt-1 pb-3">
-        <div
-          class="rounded bg-teal-300 text-gray p-1 w-auto text-center font-bold"
-        >
-          {{ period(item) }}
-        </div>
-        <div
-          class="align-middle text-teal-300 ml-auto text-lg italic uppercase font-thin"
-        >
-          {{ item.location.split(',')[0] }},
-          <flag :iso="parseFlagIcon(item)" :squared="false" />
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row pb-3">
-        <div class="w-40 my-auto flex-shrink-0 mx-auto md:mx-0">
-          <img
-            :src="require(`~/assets/img/logos/${item.logo}`)"
-            :alt="item.logo.slice(0, item.logo.length - 4)"
-            class="w-24 mx-auto mb-4 md:mb-8"
-          >
-        </div>
-        <div class="flex flex-col my-auto">
-          <h5 class="font-bold text-base md:text-lg">
-            {{ parseName(item) }}
-          </h5>
-          <p v-if="type === 'edu'" class="mt-3">
-            {{ parseDescription(item) }}
-          </p>
-          <div v-if="type === 'work'" class="mt-3">
-            <ul class="list-disc ml-10">
-              <li
-                v-for="(highlight, index) in parseDescription(item)"
-                :key="`${highlight}-${index}`"
-              >
-                {{ highlight }}
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex mt-2 space-x-4 mt-3">
-            <a
-              v-if="item.url"
-              :href="item.url"
-              class="text-link"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              view website
-              <sup class="text-xs">
-                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
-              </sup>
-            </a>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
+  <section class="timeline timeline-clippy timeline-hexagon">
+    <ul>
+      <li v-for="item in input" :key="item.id">
+        <VerticalTimelineItem v-bind="parseInput(item)" />
+      </li>
+    </ul>
+  </section>
 </template>
-
 <script>
 import sizeMixin from '../../mixins/sizeMixin';
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0
+    && rect.left >= 0
+    && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function period(item, width) {
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  const start = new Date(item.startDate);
+  const end = new Date(item.endDate);
+  const hasValidEndDate = !Number.isNaN(end.getDate());
+
+  let startMonth = monthNames[start.getMonth()];
+  let endMonth;
+
+  if (hasValidEndDate) {
+    endMonth = monthNames[end.getMonth()];
+  }
+
+  if (width < 768) {
+    startMonth = startMonth.substring(0, 3);
+
+    if (hasValidEndDate) {
+      endMonth = endMonth.substring(0, 3);
+    }
+  }
+
+  if (hasValidEndDate) {
+    return `${startMonth} ${start.getFullYear()} - ${endMonth} ${end.getFullYear()}`;
+  }
+
+  return `${startMonth} ${start.getFullYear()} - Present`;
+}
 
 export default {
   mixins: [sizeMixin],
@@ -74,87 +58,159 @@ export default {
       type: Array,
       required: true,
     },
-    type: {
-      type: String,
-      required: true,
-    },
+    isEdu: Boolean,
+  },
+  mounted() {
+    window.addEventListener('load', this.callback);
+    window.addEventListener('scroll', this.callback);
   },
   methods: {
-    parseName(item) {
-      if (this.type === 'edu') {
-        return item.institution;
-      }
-
-      return `${item.position} @ ${item.name}`;
+    callback() {
+      const items = document.querySelectorAll('.timeline li');
+      Array.from(items).forEach((item) => {
+        if (isElementInViewport(item)) {
+          item.classList.add('in-view');
+        }
+      });
     },
-    parseFlagIcon(item) {
-      const alpha = item.location.split(',')[1].trim();
-      return alpha.toLowerCase();
-    },
-    parseDescription(item) {
-      if (this.type === 'edu') {
-        return item.area;
-      }
-
-      return item.highlights;
-    },
-    period(item) {
-      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-      ];
-
-      const start = new Date(item.startDate);
-      const end = new Date(item.endDate);
-
-      let startMonth = monthNames[start.getMonth()];
-      let endMonth = monthNames[end.getMonth()];
-
-      if (this.width < 768) {
-        startMonth = startMonth.substring(0, 3);
-        endMonth = endMonth.substring(0, 3);
-      }
-
-      return `${startMonth} ${start.getFullYear()} - ${endMonth} ${end.getFullYear()}`;
+    parseInput(item) {
+      return {
+        logo: item.logo,
+        title: this.isEdu ? item.institution : `${item.position} @ ${item.name}`,
+        period: period(item, this.width),
+        location: item.location.split(',')[0],
+        iso: item.location.split(',')[1].trim().toLowerCase(),
+        description: this.isEdu ? item.area : undefined,
+        highlights: this.isEdu ? undefined : item.highlights,
+        website: item.url,
+      };
     },
   },
 };
 </script>
-
 <style scoped>
-.timeline .tl-item {
-    position:relative;
-    margin-bottom: 0;
-    padding-bottom: .5em;
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #2dd4bf;
 }
 
-.timeline .tl-item:after {
-    content: '';
-    background-image: url('~assets/img/timelinemarker.svg');
-    background-size: 20px;
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: -26px;
-    top: 0px;
-    font-size: 1rem;
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
 }
 
-.timeline .tl-item:before {
-    /* lines */
-    content: '';
-    position: absolute;
-    left: -16px;
-    border-left: 1px solid #2dd4bf;
-    height: 100%;
-    width: 1px;
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #2dd4bf;
 }
 
-.text-link {
-  @apply text-teal-300 transition-all duration-300 uppercase font-bold;
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-.text-link:hover {
-  @apply opacity-75;
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -17px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #2dd4bf transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -17px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #2dd4bf;
+}
+
+.timeline ul li::after {
+  background: #2dd4bf;
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #2dd4bf;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px,0,0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px,0,0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.timeline-clippy ul li::after {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+}
+
+.timeline-hexagon ul li::after {
+  /* clip-path: polygon(10% 20%, 50% 0, 100% 50%, 90% 80%, 50% 100%, 10% 80%); */
+  clip-path: polygon(37% 0, 63% 0, 100% 22%, 100% 78%, 63% 100%, 36% 100%, 0 78%, 0 21%);
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1)
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px; /*250+45-6*/
+  }
 }
 </style>

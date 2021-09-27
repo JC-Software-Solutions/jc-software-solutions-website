@@ -30,6 +30,69 @@
   },
   "work": [
     {
+      "name": "Be-Mobile",
+      "logo": "bemobile-logo.png",
+      "location": "Melle, BE",
+      "description": "",
+      "position": "Software Engineer",
+      "url": "https://be-mobile.com/",
+      "startDate": "2021-03-15",
+      "endDate": "2021-09-30",
+      "summary": "",
+      "highlights": [
+        "Adding new major features to FlowCheck product of Be-Mobile (frontend).",
+        "Building a new golang microservice to do some dataprocessing"
+      ],
+      "technologies": [
+        "Vue",
+        "Golang",
+        "Docker",
+        "Git",
+        "Kafka"
+      ]
+    },
+    {
+      "name": "Norsepower",
+      "logo": "norsepower-logo.png",
+      "location": "Helsinki (remote), FI",
+      "description": "",
+      "position": "Software Engineer",
+      "url": "https://norsepower.com",
+      "startDate": "2021-05-01",
+      "endDate": "2021-08-31",
+      "summary": "",
+      "highlights": [
+        "Maintenance + adding new features to performance simulator",
+        "Build new application to virtualize Rotor Sails on a ship based on input & configuration parameters"
+      ],
+      "technologies": [
+        ".NET Core 3.1",
+        "C",
+        "NuxtJS",
+        "Python",
+        "Git",
+        "Docker",
+        "Azure",
+        "RabbitMQ",
+        "PostgreSQL + PostGIS"
+      ]
+    },
+    {
+      "name": "JC Software Solutions",
+      "logo": "jcsoftware-logo.png",
+      "location": "Belgium, BE",
+      "description": "",
+      "position": "Founder",
+      "url": "https://jc-software.solutions",
+      "startDate": "2021-02-01",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Started the freelance life"
+      ],
+      "technologies": []
+    },
+    {
       "name": "Norsepower",
       "logo": "norsepower-logo.png",
       "location": "Helsinki, FI",
@@ -60,7 +123,7 @@
       "logo": "norsepower-logo.png",
       "location": "Helsinki, FI",
       "description": "",
-      "position": "Software Engineer Intern",
+      "position": "SE Intern",
       "url": "https://norsepower.com",
       "startDate": "2020-08-17",
       "endDate": "2020-10-23",
@@ -84,7 +147,7 @@
     {
       "name": "Soundstorm",
       "logo": "soundstorm-logo.png",
-      "location": "Kaprijke, BE",
+      "location": "Kaprijke (remote), BE",
       "description": "Interactive Music Experiences",
       "position": "Software Engineer",
       "url": "https://soundstorm.online",

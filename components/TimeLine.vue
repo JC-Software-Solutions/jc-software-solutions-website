@@ -1,16 +1,16 @@
 <template>
-  <section class="h-full mt-12 xl:mt-16 2xl:mt-30">
+  <section class="h-full mt-12 2xl:mt-30">
     <div class="col-span-full h-12 xl:h-28">
       <h3>Timeline</h3>
       <hr>
     </div>
     <div>
       <h4>Work experience</h4>
-      <VerticalTimeline :input="workData" type="work" class="ml-10 mt-5" />
+      <VerticalTimeline :input="workData" />
     </div>
     <div class="mt-5">
       <h4>Education</h4>
-      <VerticalTimeline :input="educationData" type="edu" class="ml-10 mt-5" />
+      <VerticalTimeline :input="educationData" is-edu />
     </div>
     <div class="text-center">
       <button v-smooth-scroll href="#contact" class="action-button mt-5">

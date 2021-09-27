@@ -40,11 +40,23 @@
       <div class="hexIn">
         <span class="hexLink" href="#">
           <img
+            src="~/assets/img/skills/golang-logo.png"
+            alt="Java"
+          >
+          <h1>GoLang</h1>
+          <p>Performant web applications</p>
+        </span>
+      </div>
+    </li>
+    <li class="hex">
+      <div class="hexIn">
+        <span class="hexLink" href="#">
+          <img
             src="~/assets/img/skills/database-logo.png"
             alt="Database"
           >
           <h1>SQL/NoSQL</h1>
-          <p>PostgreSQL, MySQL, MSSQL, MongoDB, ...</p>
+          <p>PostgreSQL, MongoDB, ...</p>
         </span>
       </div>
     </li>
@@ -60,7 +72,6 @@
         </span>
       </div>
     </li>
-    <li v-if="width > 600" class="hex" />
     <li class="hex">
       <div class="hexIn">
         <span class="hexLink" href="#">
@@ -69,7 +80,7 @@
             alt="Artificial Intelligence"
           >
           <h1>AI</h1>
-          <p>Deep Learning, Keras, Tensorflow, Python,  ...</p>
+          <p>Deep Learning, Keras/Tensorflow, Python,  ...</p>
         </span>
       </div>
     </li>
@@ -200,11 +211,11 @@ export default {
     padding-bottom: 7.4%;
   }
   .hex {
-    width: 33.333%; /* = 100 / 3 */
+    width: 25%; /* = 100 / 4 */
   }
-  .hex:nth-child(5n + 4) {
+  .hex:nth-child(4n+5) {
     /* first hexagon of even rows */
-    margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
+    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
 
@@ -214,11 +225,11 @@ export default {
     padding-bottom: 7.4%;
   }
   .hex {
-    width: 33.333%; /* = 100 / 3 */
+    width: 25%; /* = 100 / 4 */
   }
-  .hex:nth-child(5n + 4) {
+  .hex:nth-child(4n + 5) {
     /* first hexagon of even rows */
-    margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
+    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
 
@@ -230,7 +241,7 @@ export default {
   .hex {
     width: 33.333%; /* = 100 / 3 */
   }
-  .hex:nth-child(5n + 4) {
+  .hex:nth-child(4n + 4) {
     /* first hexagon of even rows */
     margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
   }

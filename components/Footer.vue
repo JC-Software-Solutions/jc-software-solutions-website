@@ -7,7 +7,7 @@
   >
     <div class="py-1">
       {{ (new Date()).getFullYear() }} &copy; Jeroen Claessens -
-      <a href="https://github.com/jclaessens97" target="_blank" rel="noreferrer noopener" aria-label="Github">
+      <a href="https://github.com/JC-Software-Solutions/jc-software-solutions-website" target="_blank" rel="noreferrer noopener" aria-label="Github">
         {{ $t('footer.viewOn') }}
         <font-awesome-icon :icon="['fab', 'github']" />
       </a>

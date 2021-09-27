@@ -20,7 +20,7 @@
     },
     "service2": {
       "title": "Analysis",
-      "content": "Do you have an idea for a (web)application but don't know where to start or how to develop it yourself? I can help you by translating your needs to developer terms."
+      "content": "Do you have an idea for a (web)application, but don't know where to start or how to develop it yourself? I can help you by translating your needs to developer terms."
     },
     "service3": {
       "title": "DevOps",
@@ -28,13 +28,13 @@
     }
   },
   "aboutMe": {
-    "title": "About Me",
+    "title": "About me",
     "paragraph1": "From an early age I developed a taste for everything that involved computers.",
-    "paragraph2": "I was very eager to start studying basic computer programming, networking and hardware in High School. To pursue my passion I then decided to enroll at <span class=\"highlight\">Karel de Grote University College in Antwerp</span> where I earned a <span class=\"highlight\">Bachelor's Degree of Applied Computer Science</span> with a focus on <span class=\"highlight\">Application Development</span>.",
+    "paragraph2": "I was very eager to start studying basic computer programming, networking and hardware in high school. To pursue my passion I then decided to enroll at <span class=\"highlight\">Karel de Grote University College in Antwerp</span>, where I earned a <span class=\"highlight\">Bachelor's Degree of Applied Computer Science</span> with a focus on <span class=\"highlight\">Application Development</span>.",
     "paragraph3": "My experience includes <span class=\"highlight\">backend, frontend and deployment aspects of the development cycle</span>. Although I have a slight preference for the first, I will definitely not be discouraged by the other two.",
-    "paragraph4": "I believe that my greatest strength is the <span class=\"highlight\">ability to adapt quickly to new technologies</span>, which is required in an innovative and dynamic sector. The challenge to stay up to date with the newest technologies and trends and to gain knowledge on them, is what appeals most to me in the job.",
+    "paragraph4": "I believe that my greatest strength is the <span class=\"highlight\">ability to adapt quickly to new technologies</span>, which is required in an innovative and dynamic sector. The challenge to stay up to date with the newest technologies and trends and gain knowledge on them, is what appeals most to me in the job.",
     "paragraph5": "Below <span class=\"highlight\">I compiled a list of technologies</span> I feel confident in. Altough I previously dealt with various other computer technologies, it's nearly impossible to list all of them.",
-    "paragraph6": "My other interests:<br/><br/>Apart from writing code, I play basketball in my spare time. I also love travelling and hiking. The header image you see at the top of the page is from one of the hikes I did when I did an internship/worked in Finland for 6 months"
+    "paragraph6": "My other interests:<br/><br/>Apart from writing code, I play basketball in my spare time. I also love travelling and hiking. The header image you see at the top of the page is from one of the hikes I did when I did an internship/worked in Finland for 6 months."
   },
   "contact": {
     "title": "Contact",

@@ -99,6 +99,10 @@ export default {
   background: #2dd4bf;
 }
 
+.timeline ul li:first-of-type {
+  background: linear-gradient(#1a202c, #2dd4bf, #2dd4bf);
+}
+
 .timeline ul li::after {
   content: '';
   position: absolute;

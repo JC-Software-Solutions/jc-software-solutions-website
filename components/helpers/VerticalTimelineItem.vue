@@ -18,6 +18,11 @@
         <flag :iso="iso" :squared="false" />
       </h2>
     </div>
+
+    <p v-if="studyType" class="text-center pt-3">
+      {{ studyType }}
+    </p>
+
     <p v-if="description" class="text-center p-3">
       {{ description }}
     </p>
@@ -92,6 +97,10 @@ export default {
     icons: {
       type: Array,
       required: true,
+    },
+    studyType: {
+      type: String,
+      default: '',
     },
   },
 };

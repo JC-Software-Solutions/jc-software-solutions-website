@@ -84,6 +84,7 @@ export default {
         highlights: this.isEdu ? undefined : item.highlights,
         website: item.url,
         icons: item.icons,
+        studyType: item.studyType,
       };
     },
   },

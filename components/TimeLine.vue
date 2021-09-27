@@ -5,11 +5,11 @@
       <hr>
     </div>
     <div>
-      <h4>Work experience</h4>
+      <h4 class="text-center mb-5 pt-5">Work experience</h4>
       <VerticalTimeline :input="workData" />
     </div>
     <div class="mt-5">
-      <h4>Education</h4>
+      <h4 class="text-center my-5 pt-5">Education</h4>
       <VerticalTimeline :input="educationData" is-edu />
     </div>
     <div class="text-center">

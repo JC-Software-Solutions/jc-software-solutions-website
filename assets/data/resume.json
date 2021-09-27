@@ -41,7 +41,7 @@
       "summary": "",
       "highlights": [
         "Adding new major features to FlowCheck product of Be-Mobile (frontend).",
-        "Building a new golang microservice to do some dataprocessing"
+        "Building a new golang microservice to do some datapreprocessing"
       ],
       "technologies": [
         "Vue",

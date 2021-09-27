@@ -26,6 +26,18 @@
         {{ highlight }}
       </li>
     </ul>
+
+    <div v-if="icons.length" class="d-flex flex-row h-20 text-center">
+      <img
+        v-for="icon in icons"
+        :key="icon"
+        :src="require(`~/assets/img/techstack/${icon}.svg`)"
+        :alt="icon"
+        :title="icon"
+        class="h-6 inline-block mx-2 my-3"
+      >
+    </div>
+
     <div class="text-center">
       <a
         v-if="website"
@@ -75,6 +87,10 @@ export default {
     },
     website: {
       type: String,
+      required: true,
+    },
+    icons: {
+      type: Array,
       required: true,
     },
   },

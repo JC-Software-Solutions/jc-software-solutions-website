@@ -49,6 +49,14 @@
         "Docker",
         "Git",
         "Kafka"
+      ],
+      "icons": [
+        "vue",
+        "javascript",
+        "docker",
+        "kubernetes",
+        "jenkins",
+        "golang"
       ]
     },
     {
@@ -75,6 +83,16 @@
         "Azure",
         "RabbitMQ",
         "PostgreSQL + PostGIS"
+      ],
+      "icons": [
+        "csharp",
+        "c",
+        "python",
+        "nuxt",
+        "docker",
+        "postgresql",
+        "rabbitmq",
+        "azure"
       ]
     },
     {
@@ -90,7 +108,8 @@
       "highlights": [
         "Started the freelance life"
       ],
-      "technologies": []
+      "technologies": [],
+      "icons": []
     },
     {
       "name": "Norsepower",
@@ -116,6 +135,16 @@
         "Azure",
         "RabbitMQ",
         "PostgreSQL + PostGIS"
+      ],
+      "icons": [
+        "csharp",
+        "c",
+        "python",
+        "nuxt",
+        "docker",
+        "postgresql",
+        "rabbitmq",
+        "azure"
       ]
     },
     {
@@ -142,6 +171,16 @@
         "Azure",
         "RabbitMQ",
         "PostgreSQL + PostGIS"
+      ],
+      "icons": [
+        "csharp",
+        "c",
+        "python",
+        "nuxt",
+        "docker",
+        "postgresql",
+        "rabbitmq",
+        "azure"
       ]
     },
     {
@@ -165,6 +204,12 @@
         "NodeJS",
         "C#",
         "Azure"
+      ],
+      "icons": [
+        "unity",
+        "nodejs",
+        "csharp",
+        "azure"
       ]
     },
     {
@@ -190,6 +235,14 @@
         "PostgreSQL",
         "AWS",
         "Docker"
+      ],
+      "icons": [
+        "nuxt",
+        "nodejs",
+        "postgresql",
+        "aws",
+        "docker",
+        "kubernetes"
       ]
     },
     {
@@ -212,6 +265,12 @@
         "Keras",
         "Tensorflow 1.14 & 2.0",
         "VueJS + Electron"
+      ],
+      "icons": [
+        "python",
+        "tensorflow",
+        "vue",
+        "electron"
       ]
     },
     {
@@ -228,12 +287,10 @@
         "Succesfully wrote a VBA Macro to automate data processing"
       ],
       "technologies": [
-        "Python",
-        "Keras",
-        "Tensorflow",
-        "VueJS",
-        "Electron"
-      ]
+        "excel",
+        "vba"
+      ],
+      "icons": []
     }
   ],
   "volunteer": [
@@ -259,7 +316,8 @@
       "studyType": "Professional Bachelor",
       "startDate": "2015-09-21",
       "endDate": "2020-06-30",
-      "score": ""
+      "score": "",
+      "icons": []
     },
     {
       "institution": "KaSO Mortsel",
@@ -270,7 +328,8 @@
       "studyType": "Highschool",
       "startDate": "2013-09-01",
       "endDate": "2015-06-30",
-      "score": ""
+      "score": "",
+      "icons": []
     }
   ],
   "awards": [

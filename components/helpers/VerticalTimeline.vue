@@ -83,6 +83,7 @@ export default {
         description: this.isEdu ? item.area : undefined,
         highlights: this.isEdu ? undefined : item.highlights,
         website: item.url,
+        icons: item.icons,
       };
     },
   },

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main class="container px-4 mx-auto">
+    <main class="container px-4 mx-auto overflow-x-hidden">
       <Services />
       <AboutMe />
       <TimeLine />

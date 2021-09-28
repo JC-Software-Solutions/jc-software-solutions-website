@@ -85,10 +85,9 @@
         "PostgreSQL + PostGIS"
       ],
       "icons": [
-        "csharp",
-        "c",
-        "python",
+        "golang",
         "nuxt",
+        "csharp",
         "docker",
         "postgresql",
         "rabbitmq",

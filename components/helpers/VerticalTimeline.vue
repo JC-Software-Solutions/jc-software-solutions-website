@@ -84,6 +84,7 @@ export default {
         highlights: this.isEdu ? undefined : item.highlights,
         website: item.url,
         icons: item.icons,
+        studyType: item.studyType,
       };
     },
   },
@@ -216,6 +217,26 @@ export default {
   }
   .timeline ul li:nth-child(even) div {
     left: -289px; /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #2dd4bf transparent transparent;
   }
 }
 </style>

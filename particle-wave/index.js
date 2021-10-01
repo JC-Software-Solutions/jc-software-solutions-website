@@ -19,12 +19,6 @@ let mouseY = -340;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
-let paused = false;
-
-function onVisibilityChange() {
-  paused = document.visibilityState === 'hidden';
-}
-
 function onWindowResize() {
   windowHalfX = window.innerWidth / 2;
   windowHalfY = window.innerHeight / 2;
@@ -104,7 +98,6 @@ export function init(container) {
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
 
-  document.addEventListener('visibilitychange', onVisibilityChange, false);
   document.addEventListener('mousemove', onDocumentMouseMove, false);
   document.addEventListener('touchstart', onDocumentTouchStart, false);
   document.addEventListener('touchmove', onDocumentTouchMove, false);
@@ -112,10 +105,6 @@ export function init(container) {
 }
 
 export function animate() {
-  if (paused) {
-    return;
-  }
-
   requestAnimationFrame(animate);
   frameThrottle(render)();
 }

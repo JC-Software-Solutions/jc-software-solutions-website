@@ -1,6 +1,8 @@
 <template>
-  <header class="flex w-screen h-screen">
-    <div class="px-5 md:px-0 m-auto text-white tracking-wider text-center md:text-left">
+  <header
+    class="flex w-screen h-screen justify-center items-center bg-gradient-to-b from-teal-900"
+  >
+    <div class="absolute md:px-0 m-auto text-white tracking-wider text-center md:text-left">
       <h1 class="text-2xl sm:text-4xl md:text-5xl xl:text-6xl">
         {{ $t('header.headtitle') }} <span class="text-teal-300 font-bold">Jeroen Claessens</span>
       </h1>
@@ -8,23 +10,29 @@
       <p class="mt-5 md:text-lg">
         {{ $t('header.subline') }}
       </p>
-      <a v-smooth-scroll href="#contact" class="action-button mt-4">
-        {{ $t('actions.getInTouch') }}
-      </a>
+      <div class="text-center">
+        <a v-smooth-scroll href="#contact" class="action-button mt-4">
+          {{ $t('actions.getInTouch') }}
+        </a>
+      </div>
     </div>
     <div class="absolute bottom-0 flex justify-center w-screen animate-bounce">
       <!-- Created by kiddo from the Noun Project -->
       <img class="h-24" src="~/assets/img/scroll.svg" alt="scroll icon">
     </div>
+    <div ref="particleContainer" class="relative" />
   </header>
 </template>
 
 <script>
 import TypeWriter from 'typewriter-effect/dist/core';
+import { init, animate } from '../particle-wave';
 
 export default {
   mounted() {
     this.startTypeWriter();
+    init(this.$refs.particleContainer);
+    animate();
   },
   methods: {
     startTypeWriter() {
@@ -51,23 +59,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-header {
-  position: relative;
-  z-index: 1;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  background-image: url('~assets/img/jpg/header-bg1.jpg');
-  background-size: cover;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: .4;
-  z-index: -1;
-}
-</style>

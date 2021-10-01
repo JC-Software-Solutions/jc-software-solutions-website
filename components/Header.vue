@@ -2,8 +2,8 @@
   <header
     class="flex w-screen h-screen justify-center items-center bg-gradient-to-b from-teal-900"
   >
-    <div class="absolute md:px-0 m-auto text-white tracking-wider text-center md:text-left">
-      <h1 class="text-2xl sm:text-4xl md:text-5xl xl:text-6xl">
+    <div class="absolute px-5 md:px-0 m-auto text-white tracking-wider text-center md:text-left">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl xl:text-6xl">
         {{ $t('header.headtitle') }} <span class="text-teal-300 font-bold">Jeroen Claessens</span>
       </h1>
       <h2 ref="subtitle" class="text-xl sm:text-2xl md:text-4xl xl:text-5xl" />
@@ -20,7 +20,7 @@
       <!-- Created by kiddo from the Noun Project -->
       <img class="h-24" src="~/assets/img/scroll.svg" alt="scroll icon">
     </div>
-    <div ref="particleContainer" class="relative" />
+    <div ref="particleContainer" class="relative invisible sm:visible" />
   </header>
 </template>
 

@@ -1,4 +1,4 @@
-// GO HERE => https://github.com/mrdoob/three.js/blob/master/examples/canvas_particles_waves.html
+// Based on: https://github.com/mrdoob/three.js/blob/master/examples/canvas_particles_waves.html
 import * as THREE from 'three';
 import frameThrottle from './frame-throttle';
 

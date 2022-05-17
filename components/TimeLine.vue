@@ -17,9 +17,9 @@
       <VerticalTimeline :input="educationData" is-edu />
     </div>
     <div class="text-center">
-      <button v-smooth-scroll href="#contact" class="action-button mt-5">
+      <a href="#contact" class="action-button mt-5">
         Get in touch
-      </button>
+      </a>
     </div>
   </section>
 </template>

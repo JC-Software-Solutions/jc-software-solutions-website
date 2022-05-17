@@ -11,7 +11,7 @@
         {{ $t('header.subline') }}
       </p>
       <div class="text-center">
-        <a v-smooth-scroll href="#contact" class="action-button mt-4">
+        <a href="#contact" class="action-button mt-4">
           {{ $t('actions.getInTouch') }}
         </a>
       </div>

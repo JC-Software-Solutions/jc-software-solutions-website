@@ -33,9 +33,9 @@
       </div>
     </div>
     <div class="text-center">
-      <button v-smooth-scroll href="#contact" class="action-button mt-5">
+      <a href="#contact" class="action-button mt-5">
         {{ $t('actions.getInTouch') }}
-      </button>
+      </a>
     </div>
   </section>
 </template>

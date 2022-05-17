@@ -2,7 +2,7 @@
   <section class="timeline timeline-clippy timeline-hexagon">
     <ul>
       <li v-for="item in input" :key="item.id">
-        <VerticalTimelineItem v-bind="parseInput(item)" />
+        <HelpersVerticalTimelineItem v-bind="parseInput(item)" />
       </li>
     </ul>
   </section>

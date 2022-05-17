@@ -1,7 +1,13 @@
-export default {
-  ssr: false,
+import { defineNuxtConfig } from '@nuxt/bridge';
 
+export default defineNuxtConfig({
+  ssr: false,
   target: 'static',
+  components: true,
+
+  bridge: {
+    // vite: true,
+  },
 
   head: {
     title: 'Jeroen Claessens | Freelance Software Engineer',
@@ -13,14 +19,10 @@ export default {
     ],
   },
 
-  css: [
-  ],
-
   plugins: [
     { src: '~/plugins/VueFlagIcon.js', ssr: false },
   ],
 
-  components: true,
 
   buildModules: [
     '@nuxtjs/fontawesome',
@@ -82,7 +84,4 @@ export default {
   gtm: {
     id: 'GTM-MW3GSSD',
   },
-
-  build: {
-  },
-};
+});

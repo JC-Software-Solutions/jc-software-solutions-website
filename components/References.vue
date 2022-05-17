@@ -16,7 +16,7 @@
         class="w-full md:w-3/4 md:mx-auto mt-5"
       >
         <slide v-for="ref in references" :key="ref.id">
-          <Quote :reference="ref" />
+          <HelpersQuote :reference="ref" />
         </slide>
       </carousel>
     </div>

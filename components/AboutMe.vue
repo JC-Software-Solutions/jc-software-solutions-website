@@ -29,7 +29,7 @@
     </div>
     <div class="my-5">
       <div class="w-4/5 sm:w-3/5 md:w-2/5 mx-auto mt-3">
-        <SkillsHex />
+        <HelpersSkillsHex />
       </div>
     </div>
     <div class="text-center">

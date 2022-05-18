@@ -18,10 +18,7 @@
         {{ $t('contact.success') }}
       </p>
       <ul v-if="invalid" class="my-4 rounded bg-red-500 text-white p-3 my-2">
-        <li
-          v-for="(error, index) in errorMessages"
-          :key="`error-${index}`"
-        >
+        <li v-for="(error, index) in errorMessages" :key="`error-${index}`">
           {{ $t(error) }}
         </li>
       </ul>
@@ -136,10 +133,10 @@ export default {
       this.errorMessages = [];
 
       if (
-        (!this.input.firstName || this.input.firstName.length === 0)
-        && (!this.input.lastName || this.input.lastName.length === 0)
-        && (!this.input.email || this.input.email.length === 0)
-        && (!this.input.message || this.input.message.length === 0)
+        (!this.input.firstName || this.input.firstName.length === 0) &&
+        (!this.input.lastName || this.input.lastName.length === 0) &&
+        (!this.input.email || this.input.email.length === 0) &&
+        (!this.input.message || this.input.message.length === 0)
       ) {
         this.errorMessages.push('error.required');
         invalid = true;
@@ -196,11 +193,11 @@ label {
 }
 
 .textfield {
-  @apply appearance-none block w-full bg-trueGray-200 text-trueGray-700
-        border border-trueGray-200 rounded py-2 px-2 mb-3 leading-tight;
+  @apply appearance-none block w-full bg-neutral-200 text-neutral-700
+        border border-neutral-200 rounded py-2 px-2 mb-3 leading-tight;
 }
 
 .textfield:focus {
-  @apply outline-none bg-white border-trueGray-500;
+  @apply outline-none bg-white border-neutral-500;
 }
 </style>

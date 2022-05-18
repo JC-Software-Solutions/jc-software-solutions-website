@@ -7,7 +7,7 @@
     "email": "jclaessens97@hotmail.com",
     "phone": "+32 498 29 67 31",
     "url": "",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+    "summary": "",
     "location": {
       "address": "",
       "postalCode": "",
@@ -30,34 +30,18 @@
   },
   "work": [
     {
-      "name": "Be-Mobile",
-      "logo": "bemobile-logo.png",
-      "location": "Melle, BE",
+      "name": "SkyeBase",
+      "logo": "skyebase-logo.png",
+      "location": "Antwerp, BE",
       "description": "",
       "position": "Software Engineer",
-      "url": "https://be-mobile.com/",
-      "startDate": "2021-03-15",
-      "endDate": "2021-09-30",
+      "url": "https://skyebase.be",
+      "startDate": "2021-10-18",
+      "endDate": "Present",
       "summary": "",
-      "highlights": [
-        "Adding new major features to FlowCheck product of Be-Mobile (frontend).",
-        "Building a new golang microservice to do some datapreprocessing"
-      ],
-      "technologies": [
-        "Vue",
-        "Golang",
-        "Docker",
-        "Git",
-        "Kafka"
-      ],
-      "icons": [
-        "vue",
-        "javascript",
-        "docker",
-        "kubernetes",
-        "jenkins",
-        "golang"
-      ]
+      "highlights": ["Building a next-gen, smart, asset inspection platform"],
+      "technologies": ["NuxtJS", "AWS", "PostgreSQL"],
+      "icons": ["nuxt", "typescript", "docker", "aws", "postgresql"]
     },
     {
       "name": "Norsepower",
@@ -67,7 +51,7 @@
       "position": "Software Engineer",
       "url": "https://norsepower.com",
       "startDate": "2021-05-01",
-      "endDate": "2021-08-31",
+      "endDate": "2022-01-31",
       "summary": "",
       "highlights": [
         "Maintenance + adding new features to performance simulator",
@@ -95,6 +79,30 @@
       ]
     },
     {
+      "name": "Be-Mobile",
+      "logo": "bemobile-logo.png",
+      "location": "Melle, BE",
+      "description": "",
+      "position": "Software Engineer",
+      "url": "https://be-mobile.com/",
+      "startDate": "2021-03-15",
+      "endDate": "2021-09-30",
+      "summary": "",
+      "highlights": [
+        "Adding new major features to FlowCheck product of Be-Mobile (frontend).",
+        "Building a new golang microservice to do some datapreprocessing"
+      ],
+      "technologies": ["Vue", "Golang", "Docker", "Git", "Kafka"],
+      "icons": [
+        "vue",
+        "javascript",
+        "docker",
+        "kubernetes",
+        "jenkins",
+        "golang"
+      ]
+    },
+    {
       "name": "JC Software Solutions",
       "logo": "jcsoftware-logo.png",
       "location": "Belgium, BE",
@@ -104,9 +112,7 @@
       "startDate": "2021-02-01",
       "endDate": "Present",
       "summary": "",
-      "highlights": [
-        "Started the freelance life"
-      ],
+      "highlights": ["Started the freelance life 🚀"],
       "technologies": [],
       "icons": []
     },
@@ -198,18 +204,8 @@
         "DevOps",
         "OSX App Signing"
       ],
-      "technologies": [
-        "Unity 3D",
-        "NodeJS",
-        "C#",
-        "Azure"
-      ],
-      "icons": [
-        "unity",
-        "nodejs",
-        "csharp",
-        "azure"
-      ]
+      "technologies": ["Unity 3D", "NodeJS", "C#", "Azure"],
+      "icons": ["unity", "nodejs", "csharp", "azure"]
     },
     {
       "name": "Adshot.io",
@@ -235,14 +231,7 @@
         "AWS",
         "Docker"
       ],
-      "icons": [
-        "nuxt",
-        "nodejs",
-        "postgresql",
-        "aws",
-        "docker",
-        "kubernetes"
-      ]
+      "icons": ["nuxt", "nodejs", "postgresql", "aws", "docker", "kubernetes"]
     },
     {
       "name": "Narato",
@@ -265,12 +254,7 @@
         "Tensorflow 1.14 & 2.0",
         "VueJS + Electron"
       ],
-      "icons": [
-        "python",
-        "tensorflow",
-        "vue",
-        "electron"
-      ]
+      "icons": ["python", "tensorflow", "vue", "electron"]
     },
     {
       "name": "Technicolor",
@@ -285,10 +269,7 @@
       "highlights": [
         "Succesfully wrote a VBA Macro to automate data processing"
       ],
-      "technologies": [
-        "excel",
-        "vba"
-      ],
+      "technologies": ["excel", "vba"],
       "icons": []
     }
   ],
@@ -300,9 +281,7 @@
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
       "summary": "Global movement of free coding clubs for young people.",
-      "highlights": [
-        "Awarded 'Teacher of the Month'"
-      ]
+      "highlights": ["Awarded 'Teacher of the Month'"]
     }
   ],
   "education": [
@@ -352,20 +331,12 @@
     {
       "name": "Web Development",
       "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
+      "keywords": ["HTML", "CSS", "Javascript"]
     },
     {
       "name": "Compression",
       "level": "Master",
-      "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
-      ]
+      "keywords": ["Mpeg", "MP4", "GIF"]
     }
   ],
   "languages": [
@@ -385,10 +356,7 @@
   "interests": [
     {
       "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
+      "keywords": ["Ferrets", "Unicorns"]
     }
   ],
   "references": [
@@ -406,18 +374,11 @@
         "Built by all women team of newbie programmers",
         "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
       ],
-      "keywords": [
-        "GoogleMaps",
-        "Chrome Extension",
-        "Javascript"
-      ],
+      "keywords": ["GoogleMaps", "Chrome Extension", "Javascript"],
       "startDate": "2016-08-24",
       "endDate": "2016-08-24",
       "url": "missdirection.example.com",
-      "roles": [
-        "Team lead",
-        "Designer"
-      ],
+      "roles": ["Team lead", "Designer"],
       "entity": "Smoogle",
       "type": "application"
     }

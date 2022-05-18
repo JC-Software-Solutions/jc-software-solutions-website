@@ -1,13 +1,7 @@
-import { defineNuxtConfig } from '@nuxt/bridge';
-
-export default defineNuxtConfig({
+export default {
   ssr: false,
   target: 'static',
   components: true,
-
-  bridge: {
-    // vite: true,
-  },
 
   head: {
     title: 'Jeroen Claessens | Freelance Software Engineer',
@@ -19,9 +13,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  plugins: [
-    { src: '~/plugins/VueFlagIcon.js', ssr: false },
-  ],
+  plugins: [{ src: '~/plugins/VueFlagIcon.js', ssr: false }],
 
   buildModules: [
     '@nuxtjs/fontawesome',
@@ -29,17 +21,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
-  modules: [
-    'nuxt-i18n',
-    '@nuxtjs/gtm',
-  ],
+  modules: ['nuxt-i18n', '@nuxtjs/gtm'],
 
   i18n: {
     lazy: true,
     langDir: './locales/',
-    locales: [
-      { code: 'en', iso: 'en', file: 'en.json' },
-    ],
+    locales: [{ code: 'en', iso: 'en', file: 'en.json' }],
     defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: false,
@@ -51,20 +38,9 @@ export default defineNuxtConfig({
 
   fontawesome: {
     icons: {
-      solid: [
-        'faCogs',
-        'faExternalLinkAlt',
-        'faHammer',
-        'faSearch',
-      ],
-      regular: [
-        'faEnvelope',
-      ],
-      brands: [
-        'faLinkedinIn',
-        'faGithub',
-        'faDiscord',
-      ],
+      solid: ['faCogs', 'faExternalLinkAlt', 'faHammer', 'faSearch'],
+      regular: ['faEnvelope'],
+      brands: ['faLinkedinIn', 'faGithub', 'faDiscord'],
     },
   },
 
@@ -77,4 +53,4 @@ export default defineNuxtConfig({
   gtm: {
     id: 'GTM-MW3GSSD',
   },
-});
+};

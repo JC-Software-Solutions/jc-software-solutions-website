@@ -15,7 +15,7 @@ body {
 }
 
 .action-button:hover {
-  @apply bg-teal-300;
+  @apply bg-teal-200;
 }
 
 section h3 {

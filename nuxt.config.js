@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     { src: '~/plugins/VueFlagIcon.js', ssr: false },
   ],
 
-
   buildModules: [
     '@nuxtjs/fontawesome',
     '@nuxtjs/eslint-module',

@@ -8,18 +8,18 @@
       <h4 class="text-center mb-5 pt-5">
         Work experience
       </h4>
-      <VerticalTimeline :input="workData" />
+      <HelpersVerticalTimeline :input="workData" />
     </div>
     <div class="mt-5">
       <h4 class="text-center my-5 pt-5">
         Education
       </h4>
-      <VerticalTimeline :input="educationData" is-edu />
+      <HelpersVerticalTimeline :input="educationData" is-edu />
     </div>
     <div class="text-center">
-      <button v-smooth-scroll href="#contact" class="action-button mt-5">
+      <a href="#contact" class="action-button mt-5">
         Get in touch
-      </button>
+      </a>
     </div>
   </section>
 </template>

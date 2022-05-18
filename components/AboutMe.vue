@@ -29,13 +29,13 @@
     </div>
     <div class="my-5">
       <div class="w-4/5 sm:w-3/5 md:w-2/5 mx-auto mt-3">
-        <SkillsHex />
+        <HelpersSkillsHex />
       </div>
     </div>
     <div class="text-center">
-      <button v-smooth-scroll href="#contact" class="action-button mt-5">
+      <a href="#contact" class="action-button mt-5">
         {{ $t('actions.getInTouch') }}
-      </button>
+      </a>
     </div>
   </section>
 </template>

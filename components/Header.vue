@@ -2,7 +2,9 @@
   <header
     class="flex w-screen h-screen justify-center items-center bg-gradient-to-b from-teal-900"
   >
-    <div class="absolute px-5 md:px-0 m-auto text-white tracking-wider text-center md:text-left">
+    <div
+      class="absolute px-5 md:px-0 m-auto text-white tracking-wider text-center md:text-left z-10"
+    >
       <h1 class="text-2xl sm:text-3xl md:text-5xl xl:text-6xl">
         {{ $t('header.headtitle') }} <span class="text-teal-300 font-bold">Jeroen Claessens</span>
       </h1>

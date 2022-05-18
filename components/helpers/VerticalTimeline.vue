@@ -1,28 +1,54 @@
 <template>
   <section class="timeline timeline-clippy timeline-hexagon">
-    <ul>
-      <li v-for="item in input" :key="item.id">
-        <HelpersVerticalTimelineItem v-bind="parseInput(item)" />
-      </li>
-    </ul>
+    <transition>
+      <ul>
+        <li v-for="item in timelineItems" :key="item.id">
+          <HelpersVerticalTimelineItem v-bind="parseInput(item)" />
+        </li>
+      </ul>
+    </transition>
+
+    <div class="text-center">
+      <button
+        v-if="input.length > SHOW_ITEM_TRESHOLD"
+        class="show-more-button mt-5"
+        @click="toggleShowMore"
+      >
+        Show {{ showMore ? 'less' : 'more' }}
+      </button>
+    </div>
   </section>
 </template>
 <script>
 import sizeMixin from '../../mixins/sizeMixin';
 
+const SHOW_ITEM_TRESHOLD = 3;
+
 function isElementInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
-    rect.top >= 0
-    && rect.left >= 0
-    && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 
 function period(item, width) {
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December',
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
 
   const start = new Date(item.startDate);
@@ -60,6 +86,18 @@ export default {
     },
     isEdu: Boolean,
   },
+  data: () => ({
+    SHOW_ITEM_TRESHOLD,
+    showMore: false,
+  }),
+  computed: {
+    timelineItems() {
+      if (!this.showMore) {
+        return this.input.slice(0, SHOW_ITEM_TRESHOLD);
+      }
+      return this.input;
+    },
+  },
   mounted() {
     window.addEventListener('load', this.callback);
     window.addEventListener('scroll', this.callback);
@@ -76,7 +114,9 @@ export default {
     parseInput(item) {
       return {
         logo: item.logo,
-        title: this.isEdu ? item.institution : `${item.position} @ ${item.name}`,
+        title: this.isEdu
+          ? item.institution
+          : `${item.position} @ ${item.name}`,
         period: period(item, this.width),
         location: item.location.split(',')[0],
         iso: item.location.split(',')[1].trim().toLowerCase(),
@@ -87,10 +127,20 @@ export default {
         studyType: item.studyType,
       };
     },
+    toggleShowMore() {
+      this.showMore = !this.showMore;
+      if (!this.showMore) {
+        window.location = '#timeline';
+      }
+    },
   },
 };
 </script>
 <style scoped>
+.timeline ul {
+  transition: 0.3s all;
+}
+
 .timeline ul li {
   list-style-type: none;
   position: relative;
@@ -157,7 +207,7 @@ export default {
 
 .timeline ul li::after {
   background: #2dd4bf;
-  transition: background .5s ease-in-out;
+  transition: background 0.5s ease-in-out;
 }
 
 .timeline ul li.in-view::after {
@@ -167,15 +217,15 @@ export default {
 .timeline ul li div {
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .timeline ul li:nth-child(odd) div {
-  transform: translate3d(200px,0,0);
+  transform: translate3d(200px, 0, 0);
 }
 
 .timeline ul li:nth-child(even) div {
-  transform: translate3d(-200px,0,0);
+  transform: translate3d(-200px, 0, 0);
 }
 
 .timeline ul li.in-view div {
@@ -192,16 +242,33 @@ export default {
 
 .timeline-hexagon ul li::after {
   /* clip-path: polygon(10% 20%, 50% 0, 100% 50%, 90% 80%, 50% 100%, 10% 80%); */
-  clip-path: polygon(37% 0, 63% 0, 100% 22%, 100% 78%, 63% 100%, 36% 100%, 0 78%, 0 21%);
+  clip-path: polygon(
+    37% 0,
+    63% 0,
+    100% 22%,
+    100% 78%,
+    63% 100%,
+    36% 100%,
+    0 78%,
+    0 21%
+  );
 }
 
 .timeline-infinite ul li::after {
   animation: scaleAnimation 2s infinite;
 }
 
+.show-more-button {
+  @apply p-2 bg-teal-400 text-gray rounded font-bold transition-all duration-500 inline-block;
+}
+
+.show-more-button:hover {
+  @apply bg-teal-200;
+}
+
 @keyframes scaleAnimation {
   0% {
-    transform: translateX(-50%) scale(1)
+    transform: translateX(-50%) scale(1);
   }
   50% {
     transform: translateX(-50%) scale(1.25);

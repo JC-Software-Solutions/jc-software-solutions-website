@@ -2,12 +2,9 @@
   <section class="h-full mt-5 xl:mt-16 2xl:mt-30">
     <div class="col-span-full h-12 xl:h-28">
       <h3>{{ $t('services.title') }}</h3>
-      <hr>
+      <hr />
     </div>
-    <div
-      class="flex flex-col md:flex-row text-white
-      text-center justify-center md:justify-between mt-5"
-    >
+    <div class="container">
       <div
         v-for="service in services"
         :key="service.id"
@@ -19,8 +16,8 @@
         <h4 class="font-thin uppercase text-xl md:text-2xl">
           {{ $t(`services.${service.id}.title`) }}
         </h4>
-        <p class="text-center md:text-left mt-5 px-4 ">
-          {{ $t(`services.${service.id}.content`) }}
+        <p class="text-center md:text-left mt-5 px-4">
+          <span v-html="$t(`services.${service.id}.content`)"></span>
         </p>
       </div>
     </div>
@@ -35,20 +32,30 @@
 <script>
 export default {
   data: () => ({
-    services: [{
-      id: 'service1',
-      icon: ['fas', 'hammer'],
-    }, {
-      id: 'service2',
-      icon: ['fas', 'search'],
-      title: 'Analysis',
-      content: '',
-    }, {
-      id: 'service3',
-      icon: ['fas', 'cogs'],
-      title: 'DevOps',
-      content: 'lorem',
-    }],
+    services: [
+      {
+        id: 'service1',
+        icon: ['fas', 'hammer'],
+      },
+      {
+        id: 'service2',
+        icon: ['fas', 'search'],
+      },
+      {
+        id: 'service3',
+        icon: ['fas', 'cogs'],
+      },
+      {
+        id: 'service4',
+        icon: ['fas', 'pen'],
+      },
+    ],
   }),
 };
 </script>
+
+<style scoped>
+.container {
+  @apply flex flex-col md:flex-row text-white text-center justify-center md:justify-between mt-5;
+}
+</style>

@@ -25,6 +25,10 @@
     "service3": {
       "title": "DevOps",
       "content": "Tired of doing manual deploys? I can write CI/CD pipelines to automate the deploys of your application. I have experience in the three major cloud providers: AWS, GCP and Azure."
+    },
+    "service4": {
+      "title": "Web Design",
+      "content": "You want a personal website or a website for your business? I can help with that. See <a href=\"https://tomasdebacker.be\" class=\"highlight\" target=\"_blank\" rel=\"noreferrer\">this website</a> for an example."
     }
   },
   "aboutMe": {

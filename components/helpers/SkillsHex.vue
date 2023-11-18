@@ -3,72 +3,54 @@
     <li class="hex">
       <div class="hexIn">
         <span class="hexLink">
-          <img
-            src="~/assets/img/skills/javascript-logo.png"
-            alt="JavaScript"
-          >
-          <h1>JavaScript</h1>
-          <p>NodeJS, VueJS, ES6+, Electron, ...</p>
+          <img src="~/assets/img/skills/typescript-logo.png" alt="TypeScript" />
+          <h1>TypeScript</h1>
+          <p></p>
+        </span>
+      </div>
+    </li>
+    <li class="hex">
+      <div class="hexIn">
+        <span class="hexLink" href="#">
+          <img src="~/assets/img/skills/golang-logo.png" alt="Java" />
+          <h1>GoLang</h1>
+          <p></p>
         </span>
       </div>
     </li>
     <li class="hex">
       <div class="hexIn">
         <span class="hexLink">
-          <img
-            src="~/assets/img/skills/csharp-logo.png"
-            alt="C#"
-          >
-          <h1>C#</h1>
-          <p>.NET Core, Entity Framework, ...</p>
+          <img src="~/assets/img/skills/rust-logo.png" alt="C#" />
+          <h1>Rust</h1>
+          <p></p>
         </span>
       </div>
     </li>
-    <li class="hex">
+    <!-- <li class="hex">
       <div class="hexIn">
         <span class="hexLink" href="#">
-          <img
-            src="~/assets/img/skills/java-logo.png"
-            alt="Java"
-          >
+          <img src="~/assets/img/skills/java-logo.png" alt="Java" />
           <h1>Java</h1>
           <p>Spring, Hibernate, ...</p>
         </span>
       </div>
-    </li>
-    <li class="hex">
+    </li> -->
+    <!-- <li class="hex">
       <div class="hexIn">
         <span class="hexLink" href="#">
-          <img
-            src="~/assets/img/skills/golang-logo.png"
-            alt="Java"
-          >
-          <h1>GoLang</h1>
-          <p>Performant web applications</p>
-        </span>
-      </div>
-    </li>
-    <li class="hex">
-      <div class="hexIn">
-        <span class="hexLink" href="#">
-          <img
-            src="~/assets/img/skills/database-logo.png"
-            alt="Database"
-          >
+          <img src="~/assets/img/skills/database-logo.png" alt="Database" />
           <h1>SQL/NoSQL</h1>
           <p>PostgreSQL, MongoDB, ...</p>
         </span>
       </div>
-    </li>
+    </li> -->
     <li class="hex">
       <div class="hexIn">
         <span class="hexLink" href="#">
-          <img
-            src="~/assets/img/skills/cloud-logo.png"
-            alt="Cloud"
-          >
+          <img src="~/assets/img/skills/cloud-logo.png" alt="Cloud" />
           <h1>Cloud</h1>
-          <p>AWS, Azure, GCP, DevOps ...</p>
+          <p>AWS, Azure, GCP, ...</p>
         </span>
       </div>
     </li>
@@ -78,9 +60,9 @@
           <img
             src="~/assets/img/skills/ai-logo.png"
             alt="Artificial Intelligence"
-          >
+          />
           <h1>AI</h1>
-          <p>Deep Learning, Keras/Tensorflow, Python,  ...</p>
+          <p></p>
         </span>
       </div>
     </li>
@@ -112,7 +94,7 @@ export default {
   outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
 .hex::after {
-  content: "";
+  content: '';
   display: block;
   padding-bottom: 86.602%; /* =  100 / tan(60) * 1.5 */
 }
@@ -177,7 +159,7 @@ export default {
   transform: translate3d(0, -100%, 0);
 }
 .hex h1::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 45%;
@@ -211,11 +193,11 @@ export default {
     padding-bottom: 7.4%;
   }
   .hex {
-    width: 25%; /* = 100 / 4 */
+    width: 33%; /* = 100 / 3 */
   }
-  .hex:nth-child(4n+5) {
+  .hex:nth-child(3n + 4) {
     /* first hexagon of even rows */
-    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
+    margin-left: 16.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
 
@@ -225,11 +207,11 @@ export default {
     padding-bottom: 7.4%;
   }
   .hex {
-    width: 25%; /* = 100 / 4 */
+    width: 33%; /* = 100 / 3 */
   }
-  .hex:nth-child(4n + 5) {
+  .hex:nth-child(3n + 4) {
     /* first hexagon of even rows */
-    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
+    margin-left: 16.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
 
@@ -253,11 +235,11 @@ export default {
     padding-bottom: 11.2%;
   }
   .hex {
-    width: 50%; /* = 100 / 3 */
+    width: 33%; /* = 100 / 3 */
   }
-  .hex:nth-child(3n + 3) {
+  .hex:nth-child(3n + 4) {
     /* first hexagon of even rows */
-    margin-left: 25%; /* = width of .hex / 2  to indent even rows */
+    margin-left: 16.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
 

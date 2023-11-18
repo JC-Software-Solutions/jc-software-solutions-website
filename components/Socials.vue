@@ -1,15 +1,34 @@
 <template>
   <aside :class="classes">
-    <a href="https://www.linkedin.com/in/jclaessens" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn Icon">
+    <a
+      href="https://www.linkedin.com/in/jclaessens"
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="LinkedIn Icon"
+    >
       <font-awesome-icon :icon="['fab', 'linkedin-in']" />
     </a>
-    <a href="https://github.com/jclaessens97" target="_blank" rel="noreferrer noopener" aria-label="Github Icon">
+    <a
+      href="https://github.com/jclaessens97"
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Github Icon"
+    >
       <font-awesome-icon :icon="['fab', 'github']" />
     </a>
-    <a href="https://discordapp.com/users/310137027330965514/" target="_blank" rel="noreferrer noopener" aria-label="Discord Icon">
+    <a
+      href="https://discordapp.com/users/310137027330965514/"
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Discord Icon"
+    >
       <font-awesome-icon :icon="['fab', 'discord']" />
     </a>
-    <a href="mailto:jeroen@jc-software.solutions" rel="noreferrer noopener" aria-label="Mail Icon">
+    <a
+      href="mailto:jeroen.claessens@jcss.be"
+      rel="noreferrer noopener"
+      aria-label="Mail Icon"
+    >
       <font-awesome-icon :icon="['far', 'envelope']" />
     </a>
   </aside>

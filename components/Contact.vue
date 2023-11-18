@@ -2,18 +2,29 @@
   <section id="contact" class="mt-5 xl:mt-16 2xl:mt-30">
     <div class="col-span-full h-12 xl:h-28">
       <h3>{{ $t('contact.title') }}</h3>
-      <hr>
+      <hr />
     </div>
+
+    <div class="text-white w-fit mx-auto mt-5">
+      <div class="flex flex-col border border-teal-300 rounded p-3 text-sm">
+        <div>JC Software Solutions BV</div>
+        <div>Viaduct-Dam 88 / 303</div>
+        <div>2060 Antwerpen</div>
+        <div>BTW BE 0777.989.488</div>
+      </div>
+    </div>
+
     <p class="text-white mx-auto mt-5 w-full lg:w-3/5">
       {{ $t('contact.paragraph') }}
     </p>
+
     <form
       ref="contactform"
       class="w-full max-w-lg mx-auto mt-3"
       netlify
       netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="form-name" value="contact" />
       <p v-if="success" class="rounded bg-green-500 text-white p-3 my-2">
         {{ $t('contact.success') }}
       </p>
@@ -35,7 +46,7 @@
             type="text"
             class="textfield"
             required
-          >
+          />
         </div>
         <div class="w-full md:w-1/2 px-3">
           <label for="last-name">
@@ -49,7 +60,7 @@
             type="text"
             class="textfield"
             required
-          >
+          />
         </div>
       </div>
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -62,7 +73,7 @@
             v-model="input.company"
             name="company"
             class="textfield"
-          >
+          />
         </div>
       </div>
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -76,7 +87,7 @@
             v-model="input.email"
             name="email"
             class="textfield"
-          >
+          />
         </div>
       </div>
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -104,7 +115,7 @@
           >
             {{ $t('contact.send') }}
           </button>
-          <img v-if="sending" src="~/assets/img/puff.svg" class="mx-auto">
+          <img v-if="sending" src="~/assets/img/puff.svg" class="mx-auto" />
         </div>
         <div class="md:w-2/3" />
       </div>
@@ -142,8 +153,9 @@ export default {
         invalid = true;
       }
 
-      // eslint-disable-next-line
-      const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+      const emailRegex =
+        // eslint-disable-next-line
+        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
       if (!emailRegex.test(this.input.email)) {
         this.errorMessages.push('error.email');
         invalid = true;

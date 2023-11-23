@@ -5,12 +5,30 @@
       <hr />
     </div>
 
-    <div class="text-white w-fit mx-auto mt-5">
-      <div class="flex flex-col border border-teal-300 rounded p-3 text-sm">
+    <div
+      class="text-white w-auto mx-auto mt-5 flex flex-row border border-teal-300 rounded p-3 w-fit"
+    >
+      <img
+        src="~/assets/img/logos/jcss-full-logo.svg"
+        alt="JC Software Solutions logo"
+        class="h-36 mr-5"
+      />
+
+      <hr class="address-divider" />
+
+      <div class="flex flex-col text-sm my-auto">
         <div>JC Software Solutions BV</div>
         <div>Viaduct-Dam 88 / 303</div>
-        <div>2060 Antwerpen</div>
+        <div>B-2060 Antwerpen</div>
         <div>BTW BE 0777.989.488</div>
+        <div>
+          <a
+            href="mailto:jeroen.claessens@jcss.be"
+            class="hover:text-teal-300 transition-all"
+          >
+            jeroen.claessens@jcss.be
+          </a>
+        </div>
       </div>
     </div>
 
@@ -211,5 +229,20 @@ label {
 
 .textfield:focus {
   @apply outline-none bg-white border-neutral-500;
+}
+
+.address-divider {
+  border: 0;
+  height: 125px;
+  width: 1px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(129, 230, 217, 0),
+    rgba(129, 230, 217, 0.75),
+    rgba(129, 230, 217, 1),
+    rgba(129, 230, 217, 0.75),
+    rgba(129, 230, 217, 0)
+  );
+  @apply my-auto mr-5;
 }
 </style>

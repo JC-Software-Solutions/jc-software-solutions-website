@@ -16,5 +16,6 @@ module.exports = {
     'vue/no-v-html': 'off',
     'no-plusplus': 'off',
     'operator-linebreak': 'off',
+    'max-len': 'off',
   },
 };

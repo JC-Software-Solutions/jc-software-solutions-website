@@ -6,17 +6,17 @@
     </div>
 
     <div
-      class="text-white w-auto mx-auto mt-5 flex flex-row border border-teal-300 rounded p-3 w-fit"
+      class="text-white w-auto mx-auto mt-5 flex flex-row flex-wrap border border-teal-300 rounded p-3 w-fit"
     >
       <img
         src="~/assets/img/logos/jcss-full-logo.svg"
         alt="JC Software Solutions logo"
-        class="h-36 mr-5"
+        class="h-36 mx-auto"
       />
 
-      <hr class="address-divider" />
+      <!-- <hr class="address-divider" /> -->
 
-      <div class="flex flex-col text-sm my-auto">
+      <div class="flex flex-col text-sm my-auto mx-auto">
         <div>JC Software Solutions BV</div>
         <div>Viaduct-Dam 88 / 303</div>
         <div>B-2060 Antwerpen</div>
@@ -243,6 +243,6 @@ label {
     rgba(129, 230, 217, 0.75),
     rgba(129, 230, 217, 0)
   );
-  @apply my-auto mr-5;
+  @apply my-auto mr-5 hidden md:visible;
 }
 </style>

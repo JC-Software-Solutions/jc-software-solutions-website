@@ -38,7 +38,7 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faCogs', 'faExternalLinkAlt', 'faHammer', 'faSearch', 'faPen'],
+      solid: ['faCogs', 'faExternalLinkAlt', 'faHammer', 'faSearch', 'faPen', 'faHandsHelping'],
       regular: ['faEnvelope'],
       brands: ['faLinkedinIn', 'faGithub', 'faDiscord'],
     },

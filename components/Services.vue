@@ -43,7 +43,7 @@ export default {
       },
       {
         id: 'service3',
-        icon: ['fas', 'cogs'],
+        icon: ['fas', 'hands-helping'],
       },
       {
         id: 'service4',

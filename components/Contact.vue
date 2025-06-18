@@ -32,9 +32,7 @@
       </div>
     </div>
 
-    <p class="text-white mx-auto mt-5 w-full lg:w-3/5">
-      {{ $t('contact.paragraph') }}
-    </p>
+    <p class="text-white mx-auto mt-5 w-full lg:w-3/5" v-html="$t('contact.paragraph')" />
 
     <form
       ref="contactform"

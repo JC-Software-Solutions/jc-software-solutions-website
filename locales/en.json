@@ -38,12 +38,12 @@
     "paragraph3": "My experience includes <span class=\"highlight\">backend, frontend and deployment aspects of the development cycle</span>. Although I have a slight preference for the first, I will definitely not be discouraged by the other two.",
     "paragraph4": "I believe that my greatest strength is the <span class=\"highlight\">ability to adapt quickly to new technologies</span>, which is required in an innovative and dynamic sector. The challenge to stay up to date with the newest technologies and trends and gain knowledge on them, is what appeals most to me in the job.",
     "paragraph5": "Below <span class=\"highlight\">I compiled a list of technologies</span> I feel confident in. Altough I previously dealt with various other computer technologies, it's nearly impossible to list all of them.",
-    "paragraph6": "Apart from writing code, I have several other activities. I played basketball for almost 20 years, but in 2022 I decided it was time to look for something more flexible to pass my free time. I replaced basketball with go-karting and trying out other sports every now and then like padel. Next to that I have a big wanderlust and I like to travel a lot. Once a year I try to do a multi-day hike to detox from my day to day job."
+    "paragraph6": "Apart from writing code, I have several other activities. I played basketball for almost 20 years, but in 2022 I decided it was time to look for something more flexible to pass my free time. I replaced basketball with go karting and trying out other sports every now and then like padel. Next to that I have a big wanderlust and I like to travel a lot. Once a year I try to do a multi-day hike to detox from my day to day job."
   },
   "contact": {
     "title": "Contact",
     "success": "Message succesfully submitted!",
-    "paragraph": "Do you have an idea for a new website or app? Do you want to make modifications on your existing software? If you're looking for someone as an addition to your dev team or someone to help you realize one of your software projects, please send me a message via the form below (or contact me via one of my socials).",
+    "paragraph": "Do you have an idea for a new website or app? Do you want to make modifications on your existing software? If you're looking for someone as an addition to your dev team or someone to help you realize one of your software projects, please send me a message via the form below, via <a href=\"https://www.linkedin.com/in/jclaessens\" class=\"highlight\" target=\"_blank\" rel=\"noreferrer\">LinkedIn</a>, my <a href=\"mailto:jeroen.claessens@jcss.be\" class=\"highlight\" target=\"_blank\" rel=\"noreferrer\">mail</a> or <a href=\"https://cal.com/jeroen-claessens/intro\" class=\"highlight\" target=\"_blank\" rel=\"noreferrer\">plan something in directly</a>",
     "firstName": "First Name",
     "lastName": "Last Name",
     "company": "Company",

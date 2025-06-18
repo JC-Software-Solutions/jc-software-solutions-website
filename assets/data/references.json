@@ -14,7 +14,13 @@
   {
     "id": "ref3",
     "quote": "Working with Jeroen was really a pleasure. Jeroen is in my opion a perfect startup/scale-up full-stack developer who can help you to build the right product from the ground up. He's a team player, very open to help, and can communicate in a clear way ! Everything you need to bring your ideas and product to the next level.",
-    "author": "Tom Daniëls, CIO & Co-Founder, SkyeBase",
+    "author": "Tom Daniëls, CEO & Co-Founder, SkyeBase",
     "authorImage": "tom.jpg"
+  },
+  {
+    "id": "ref4",
+    "quote": "Jeroen joined Segments at a time when our codebase was undergoing significant changes, yet he ramped up quickly and took ownership of a challenging migration from Vue 2 to 3. He is a fast builder and proactive team member who stays on top of the latest developments in the field. Jeroen is a pleasure to work with and would thrive in any early-stage startup environment.",
+    "author": "Bert, CTO & Co-Founder, Segments.ai (YC W21)",
+    "authorImage": "bert.jpg"
   }
 ]
